@@ -31,7 +31,11 @@ DEBUG = True
 CORS_ALLOWED_ORIGINS = [
     'https://steampowered-snowy.vercel.app',
 ]
-
+ALLOWED_HOSTS = [
+    'localhost',        # For local development
+    '127.0.0.1',        # For local development
+    'sflback.vercel.app',  # backend
+]
 
 # Application definition
 
