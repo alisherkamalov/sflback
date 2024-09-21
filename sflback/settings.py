@@ -16,7 +16,12 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+from pathlib import Path
+import os
 
+
+SECRET_KEY = os.environ.get('SECRET_KEY')
+DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
@@ -27,14 +32,8 @@ SECRET_KEY = 'django-insecure-hnchukis0n(-1lt8o_3r1-3xznk^fr9%3jk+ne0%0!cq@)qn$n
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-CORS_ALLOW_METHODS = [
-    'GET',
-    'POST',
-    'PUT',
-    'PATCH',
-    'DELETE',
-    'OPTIONS'
-]
+
+CORS_ALLOW_ALL_ORIGINS = True  
 
 # Application definition
 
