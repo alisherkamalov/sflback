@@ -16,9 +16,6 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-from pathlib import Path
-import os
-
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
@@ -31,12 +28,14 @@ SECRET_KEY = 'django-insecure-hnchukis0n(-1lt8o_3r1-3xznk^fr9%3jk+ne0%0!cq@)qn$n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
-
 CORS_ALLOWED_ORIGINS = [
-    'https://steampowered-snowy.vercel.app/',
+    'https://steampowered-snowy.vercel.app',
 ]
-
+ALLOWED_HOSTS = [
+    'localhost',        # For local development
+    '127.0.0.1',        # For local development
+    'sflback.vercel.app',  # backend
+]
 
 # Application definition
 
@@ -99,9 +98,11 @@ WSGI_APPLICATION = 'sflback.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / "db.sqlite3",  
     }
 }
+
+
 
 
 # Password validation
