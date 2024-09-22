@@ -12,7 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = ['*']
-
+SECRET_KEY = 'django-insecure-hnchukis0n(-1lt8o_3r1-3xznk^fr9%3jk+ne0%0!cq@)qn$n'
 CORS_ALLOWED_ORIGINS = [
     'https://steampowered-snowy.vercel.app',
 ]
