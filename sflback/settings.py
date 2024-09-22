@@ -52,14 +52,11 @@ INSTALLED_APPS = [
     'accounts',
 ]
 REST_FRAMEWORK = {
-    'DEFAULT_RENDERER_CLASSES': [
-        'rest_framework.renderers.JSONRenderer',
-        'rest_framework.renderers.BrowsableAPIRenderer',  # Это позволяет использовать браузерную версию API
-    ],
     'DEFAULT_PARSER_CLASSES': [
         'rest_framework.parsers.JSONParser',
-    ]
+    ],
 }
+
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
